@@ -207,6 +207,7 @@ a{
 
 /* Definindo o estilo das seções da página */
 .sec{
+    overflow: auto;
     font-family: 'Roboto', sans-serif;
     padding: 10px 30px;
     border-radius: 20px;
@@ -241,6 +242,7 @@ a{
 }
 /* Define propriedades da div que contém o conteúdo escrito da seção 'Quem Sou Eu' */
 #contentTxtQuemSouEu{
+    overflow: auto;
     text-align: center;
     width: 65%;
     height: 99%;
@@ -275,54 +277,60 @@ a{
 #imagesHobbie{
     width: 45vw;
     height: 48vh;
-    border: 1px solid;
     flex-wrap: wrap;
-    padding: 0.5%;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.imgHobbie{
+    position: inherit;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 95%;
+    height: 95%;
 }
 
 .divImgHobbie{
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 20vh;
     
 }
 
 #divImgHobbie1{
-    background-color: blue;
     width: 30%;
     height: 50%;
 }
 
 #divImgHobbie2{ 
-    background-color: red;
     width: 30%;
     height: 50%;
 }
 
 #divImgHobbie3{
-    background-color: yellow;
     width: 30%;
     height: 100%;
 }
 
 #divImgHobbie4{
     width: 40%;
-    height: 50%;
-    background-color: purple;
+    height: 59%;
 }
 
 #divHobbieRow{
-    width: 40;
-    height: 50%;
+    padding: 1px;
+    width: 40%;
+    height: 40%;
 }
 
 #divImgHobbie5{
     width: 65%;
-    background-color: black;
 }
 
 #divImgHobbie6{
     width: 35%;
-    background-color: white;
 }
 
 /* ///////////////////////////////////////////////////////////// Seção Contato //////////////////////////////////////////// */
