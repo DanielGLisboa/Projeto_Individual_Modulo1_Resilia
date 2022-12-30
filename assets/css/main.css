@@ -1,5 +1,5 @@
 /* Importando fontes utilizadas na página */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caramel&family=Lobster&family=Roboto&family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caramel&family=Shadows&family=Lobster&family=Roboto&family=Source+Into+Light+Sans+Pro:wght@600&display=swap');
 
 /* ANIMAÇÃO EXIBIDA AO CARREGAR A PÁGINA*/
 /* Animação dos icones laterais, das imagens do cabeçalho e do conteúdo  */
@@ -109,7 +109,7 @@ a{
 /* Definindo efeito ao pausar o mouse em cima dos icones laterais */
 #iconGitHub:hover, #iconLinkedin:hover{
     transition: 1s;
-    width: 90%;
+    width: 70%;
     height: 80%;
     background-color: rgba(151, 151, 151, 0.438);
 }
@@ -123,23 +123,24 @@ a{
     justify-content: space-between;
     width: 80%;
     margin: auto;
-    height: 15vh;
+    height: 18vh;
 }
 /* Definindo propriedades das divs contendo os cada um dos links do cabeçalho */
 .linkImagehover{
     margin-top: 2%;
-    width: 14%;
-    height: 100%;
+    width: 15%;
+    height: 18vh;
 }
 /* Propriedades da imagem principal do cabeçalho */
 #imagePerfil{
     margin-top: -1vh;
-    width: 115%; 
-    height: 110%;
+    width: 7vw; 
+    height: 85%;
     border-radius: 100%;
 }
 /* Deixa texto dos links do cabeçalho trasparente */
 .textHover{
+    font-family: 'Shadows Into Light', cursive;
     opacity: 0;
 }
 /* Definindo porpriedades gerais das imagens do cabeçalho */
@@ -181,7 +182,6 @@ a{
     background-blend-mode: color;
     animation: animationHeader 2s;
 }
-
 
 
 /* ///////////////////////////////////////////////////////// SEÇÔES //////////////////////////////////////////// */
@@ -249,7 +249,7 @@ a{
 }
 /* Definindo propriedades do titulo(Meu nome) do conteúdo de 'Quem Sou Eu'*/
 #myName{
-    margin-top: 2%;
+    margin-top: 0px;
     justify-content: center;
     font-size: 150%;
     font-family: 'Roboto', sans-serif;
@@ -262,7 +262,10 @@ a{
 }
 
 /* Definindo propriedades do texto principal da seção 'Quem Sou EU' */
-#textQuemSouEu{
+#textMainQuemSouEu{
+
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2vh;
     align-self: center;
     width: 80%;
     text-align: justify;
@@ -272,13 +275,14 @@ a{
 
 
 /* /////////////////////////////////////////////////////////////// Seção Hobbies //////////////////////////////////////////// */
-
+#ContentHobbies{
+    flex-direction: row;
+}
 
 #imagesHobbie{
-    width: 45vw;
+    width: 60%;
     height: 48vh;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.411);
     border-radius: 10px;
     padding: 5px;
 }
@@ -333,6 +337,31 @@ a{
     width: 35%;
 }
 
+#contentTxtHobbie{
+    width: 40% ;
+    height: 48vh;
+
+}
+
+#textMainHobbies{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.5vh;
+    line-height: 2px;
+}
+
+.txtCenter{
+    text-align: center;
+}
+
+.txtEnd{
+    text-align: end;
+}
+
+
+
 /* ///////////////////////////////////////////////////////////// Seção Contato //////////////////////////////////////////// */
 
 /* Definindo propriedades gerais do formulário de contato */
@@ -374,8 +403,9 @@ a{
     border: none;
     align-self: flex-end;
     border-radius: 5px;
-    width: 20%;
+    width: 4vw;
     height: 5vh;
+    font-size: 2vh;
     background-color: rgb(90, 90, 90);
 }
 /*Define Efeito ao passar o mouse sobre o botão Enviar*/
@@ -383,6 +413,3 @@ a{
     transition: 0.2s;
     background-color: rgba(192, 190, 190, 0.815);
 }
-
-
-

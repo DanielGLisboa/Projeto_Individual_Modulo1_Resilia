@@ -75,7 +75,7 @@
                                     de crescer"</p>
                                 <p class="bio">20 Anos / São Paulo - SP</p>
 
-                                <div id="textQuemSouEu" class="displayFlex flexColumn"> <!-- texto principal de Quem Sou Eu -->
+                                <div id="textMainQuemSouEu" class="displayFlex flexColumn"> <!-- texto principal de Quem Sou Eu -->
                                     <p> Olá! Sou o Daniel. </p>
                                     <p>Tenho 20 anos de idade e sou um Jovem apaixonado por tecnologia.</p>
                                     <p>
@@ -106,8 +106,8 @@
                             </h2>
                         </div>
 
-                         <div id="ContentHobbies"> <!-- div que contém todo o contéudo de Hobbies -->
-                            <div id="imagesHobbie" class="displayFlex flexColumn">
+                         <div id="ContentHobbies" class="displayFlex" > <!-- div que contém todo o contéudo de Hobbies -->
+                            <div id="imagesHobbie" class="displayFlex flexColumn"> <!-- div que contém todas as Imagens de Hobbies -->
                                 <div id="divImgHobbie1" class="divImgHobbie displayFlex">
                                     <img class="imgHobbie" src="./assets/img/imgHobbie1.jpg" alt="">
                                 </div>
@@ -133,7 +133,21 @@
                                         <img class="imgHobbie" src="./assets/img/imgHobbie6.jpg" alt="">
                                     </div>
                                 </div>
-                                
+                            </div>
+                            
+                            <div id="contentTxtHobbie" class="displayFlex flexColumn "> <!-- Contéudo escrito da seção Hobbies-->
+                                <h3 id="myName" class="displayFlex"> 
+                                    Sempre Que Posso Eu gosto De...
+                                </h3>
+                                <div id="textMainHobbies" class="displayFlex flexColumn"> <!-- texto principal de Hobbies-->
+                                    <p class="txtCenter">Tocar um instrumento</p>
+                                    <p>Fazer Uma Viajem</p>
+                                    <p class="txtEnd" >Estudar programação</p>
+                                    <p class="txtCenter">Ter um tempo com a família</p>
+                                    <p>Ir à Parques.</p>
+                                    <p class="txtEnd">Praticar algum esporte</p>
+                                    <p class="txtCenter">Ir Ao Cinema</p>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -157,7 +171,7 @@
 
                                 <textarea id="message" class="inputContato" placeholder="Deixe sua Mensagem *" required="required"></textarea>
 
-                                <input id="btnEnviar" type="submit"  value="Enviar" />
+                                <button id="btnEnviar" type="submit">Enviar</button>
                             </form>
                         </div>
                     </section>
