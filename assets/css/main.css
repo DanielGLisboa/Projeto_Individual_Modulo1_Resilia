@@ -1,0 +1,331 @@
+/* Importando fontes utilizadas na página */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caramel&family=Lobster&family=Roboto&family=Source+Sans+Pro:wght@600&display=swap');
+
+/* ANIMAÇÃO EXIBIDA AO CARREGAR A PÁGINA*/
+/* Animação dos icones laterais, das imagens do cabeçalho e do conteúdo  */
+@keyframes animationInit{
+    0%,30%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* Animação do background */
+@keyframes animationBackground{
+    0%,30%{background-color: rgba(0, 0, 0, 0.918);}
+    100%{background-color: rgba(0, 0, 0, 0);}
+}
+
+/* Animação do Cabeçalho */
+@keyframes animationHeader{
+    0%,30%{ background-color: rgb(0, 0, 0); border-color: black; }
+    0%{width: 10%;height: 20vh;opacity: 0; border-radius: 100px;}
+    100%{width: 60%; height: 20vh;opacity:1;background-color: rgba(0, 0, 0, 0);}
+}
+
+/* ////////////////////////////////////////////////// Propriedades gerais do corpo da página e do rodapé  ///////////////////////////////////////////// */
+
+/* Definindo background e a altura da barra de rolagem */
+::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.363);
+    height: 10px;
+}
+
+/* Definindo a cor da barra de rolagem */
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+
+/* Classe global para display flex */
+.displayFlex{
+    display: flex;
+}
+
+/* Classe global para alinhamento em coluna */
+.flexColumn{
+    flex-direction: column;
+}
+
+/* Define posicionamento e propriedades do background da página no body */
+body{
+    position: fixed;
+    margin: 0;
+    background-image: url(../img/backgroundMain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    animation:animationBackground 1s ;
+}
+/* Define comportamento do scroll dentro do conteúdo principal */
+main{
+    scroll-behavior: smooth;
+    overflow: auto;
+    color: rgb(151, 151, 151);
+    height: 97vh;
+}
+
+/* Definindo propriedades do rodapé da pagina */
+footer{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', 'cursive';
+    font-size: small;
+    text-align: center;
+    height: 2vh;
+    color: rgb(0, 0, 0);
+}
+
+/* Retirando decoração dos links da página e definindo a cor do texto dos links */
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+
+/* //////////////////////////////////////////////////////// ICONES LATERAIS ///////////////////////////////// */
+
+/* Definindo as dimensões da div dos icones laterais da pagina (GitHub e LinkedIn) */
+#iconsTopo{
+    position: fixed;
+    margin-top: 30px;
+    width: 5%;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    animation: animationInit 1s;
+}
+/* Definindo dimensões dos links dos icones laterais */
+.linkTopo{
+    width: 100%;
+    height: 10vh;
+}
+/* Definindo as dimensões dos icones laterais */
+#iconGitHub, #iconLinkedin{
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+}
+/* Definindo efeito ao pausar o mouse em cima dos icones laterais */
+#iconGitHub:hover, #iconLinkedin:hover{
+    transition: 1s;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(151, 151, 151, 0.438);
+}
+
+
+
+/* ////////////////////////////////////// CABEÇALHO ///////////////////////////////////////////////// */
+
+/* Definindo propriedades da div que contém todos os links do cabeçalho */
+#linkImages{
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 15vh;
+}
+/* Definindo propriedades das divs contendo os cada um dos links do cabeçalho */
+.linkImagehover{
+    margin-top: 3%;
+    width: 15vh;
+    height: 15vh;
+}
+/* Propriedades da imagem principal do cabeçalho */
+#imagePerfil{
+    margin-top: -15%;
+    width: 16vh; 
+    height: 16vh;
+    border-radius: 100%;
+}
+/* Deixa texto dos links do cabeçalho trasparente */
+.textHover{
+    opacity: 0;
+}
+/* Definindo porpriedades gerais das imagens do cabeçalho */
+.imageHover{
+    background-color:rgb(151, 151, 151) ;
+    width: 13vh; 
+    height: 13vh;
+    border-radius: 100%;
+    text-align: center;
+    opacity: 1;
+    animation: animationInit 3s;
+}
+/* Efeito ao passar o mouse sobre as imagens do cabeçalho */
+.imageHover:hover{
+    transition: 0.5s;
+    opacity: 0.4;
+}
+/* Ao passar o mouse sobre uma imagem do cabeçalho o texto abaixo dela fica visível */
+.imageHover:hover ~ .textHover{
+    transition: 0.5s;
+    opacity: 1; 
+}
+
+/* Definindo porpriedades do cabealho */
+#header{
+    position: fixed;
+    background-image: linear-gradient(to right,rgba(21, 54, 161, 0.377), rgba(33, 64, 110, 0.7),rgb(57, 95, 107),rgba(51, 54, 58, 0.7),rgb(43, 46, 92,0.7),rgb(53, 57, 73), rgba(31, 29, 26, 0.377));
+    background-size: cover;
+    border-radius: 50px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    align-self: center;
+    text-align: center;
+    padding-top: 1px;
+    width: 60%;
+    height: 20vh;
+    box-shadow: 0 0px 5px 0 rgb(132, 132, 132), 0 0px 0px 0;
+    font-family: 'Roboto', sans-serif;
+    background-blend-mode: color;
+    animation: animationHeader 2s;
+}
+
+
+
+/* ///////////////////////////////////////////////////////// SEÇÔES //////////////////////////////////////////// */
+
+/* Esta classe faz com que o card da seção fique ao centro da tela ao clicar no seu respectivo link */
+.centerScreen{
+    justify-content: center;
+    width: 33%;
+}
+/* Definindo propriedades da Div que contem as seções */
+#sections{
+    margin-top: 15%;
+    overflow-x: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300%;
+    height: 60vh;
+}
+/* Definindo margem do titulo da seção */
+.secTitle{
+    margin: 5px;
+}
+
+/* Definindo o estilo das seções da página */
+.sec{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 75%;
+    height: 95%;
+    background-color: rgba(3, 3, 5, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2), 0 6px 20px 0 rgba(33, 32, 32, 0.19);
+    animation: animationInit 2s;
+}
+
+
+
+/* ////////////////////////////////////////////////////////// Seção Quem Sou Eu //////////////////////////////// */
+
+/* Define propriedades da div que contém todo o contéudo de 'Quem Sou Eu' */
+#ContentQuemSouEu{
+    width: 100%;
+    height: 85%;
+}
+
+/* Define propriedades da div que contém a foto da seção 'Quem Sou Eu' */
+#divImageQuemSouEu{
+    align-self: center;
+    width: 26vw;
+    height: 47vh;
+}
+/* Define as propriedades da foto da seção Quem sou EU */
+#ImageQuemSouEu{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+/* Define propriedades da div que contém o conteúdo escrito da seção 'Quem Sou Eu' */
+#contentTxtQuemSouEu{
+    text-align: center;
+    width: 65%;
+    height: 99%;
+}
+/* Definindo propriedades do titulo(Meu nome) do conteúdo de 'Quem Sou Eu'*/
+#myName{
+    margin-top: 2%;
+    justify-content: center;
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+/* Definindo porpriedades do texto da bio de 'Quem Sou Eu' */
+.bio{
+    margin-top: -2%;
+    font-family: 'Lobster', 'cursive';
+    font-size: medium;
+}
+
+/* Definindo propriedades do texto principal da seção 'Quem Sou EU' */
+#textQuemSouEu{
+    align-self: center;
+    width: 80%;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////// Seção Hobbies //////////////////////////////////////////// */
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////// Seção Contato //////////////////////////////////////////// */
+
+/* Definindo propriedades gerais do formulário de contato */
+.formContato{
+    justify-content: space-between;
+    width: 70%;
+    height: 45vh;
+}
+/* Definindo propriedades da caixa de mensagem doo formulário de contato */
+#message{
+    resize: none;
+    width: 100%;
+    height: 30%;
+}
+/* Definindo posicionamento da div que contém o formulário de contato */
+#contentContato{
+    justify-content: center;
+}
+/* Definindo propriedades dos campos preenchiveis */
+.inputContato{
+    color: aliceblue;
+    border: none;
+    border-bottom: 4px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.479);
+    width: 90%;
+}
+/* Definindo propriedades do texto placeholder do formulário */
+::-webkit-input-placeholder{
+    color: rgb(151, 151, 151);
+}
+
+/* Define proporção de largura do card Contato */
+#cardContato{
+    width: 40%;
+}
+/* Definindo propriedades do botão enivar */
+#btnEnviar{
+    border: none;
+    align-self: flex-end;
+    border-radius: 5px;
+    width: 20%;
+    height: 5vh;
+    background-color: rgb(90, 90, 90);
+}
+/*Define Efeito ao passar o mouse sobre o botão Enviar*/
+#btnEnviar:hover{
+    transition: 0.2s;
+    background-color: rgba(192, 190, 190, 0.815);
+}
+
+
+
