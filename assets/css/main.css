@@ -28,9 +28,14 @@
 }
 /* Definindo a cor da barra de rolagem */
 ::-webkit-scrollbar-thumb{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
 }
+/* Altera opacidade da barra de rolagem ao passar o mouse sobre ela */
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Classe global para display flex */
 .displayFlex{
     display: flex;
